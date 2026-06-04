@@ -10,7 +10,7 @@ const COURSE_URL = "https://yelumio-course-site-production.up.railway.app";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } },
 };
 
 const staggerContainer = {
@@ -141,7 +141,7 @@ function CTACard({ card }: { card: (typeof cards)[0] }) {
     <motion.div
       variants={fadeUp}
       whileHover={{ y: -6 }}
-      transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
       style={{
         position: "relative",
         background: "rgba(244,236,216,0.03)",
@@ -342,7 +342,7 @@ export default function HomePage() {
           <motion.h1
             initial={{ opacity: 0, y: 70 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.1, delay: 0.5, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
             style={{
               fontFamily: "var(--font-playfair), 'Playfair Display', serif",
               fontSize: "clamp(72px, 15vw, 200px)",
