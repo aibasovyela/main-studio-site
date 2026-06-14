@@ -239,6 +239,12 @@ export default function B2BPage() {
           >
             Работы
           </a>
+          <Link
+            href="/calculator"
+            style={{ fontFamily: "var(--font-inter), Inter, sans-serif", fontSize: 13, color: "rgba(244,236,216,0.5)", cursor: "pointer" }}
+          >
+            Рассчитать проект
+          </Link>
           <a
             href="#contact"
             onClick={e => { e.preventDefault(); document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }); }}
